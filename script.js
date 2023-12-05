@@ -68,7 +68,7 @@ alert("O resto da divisão dos números é " + restDiv);
   de recuperação.
 
   Em ambos os casos, mostre uma mensagem com o nome do aluno e a nota
-*/
+
 
 let nameStudent = prompt("Qual o nome do(a) estudante?");
 let firstGrade = prompt("Digite a primeira nota do bimestre do(a) estudante " + nameStudent);
@@ -81,3 +81,18 @@ average = average.toFixed(2)
 let result = average >= 6 ? "Parabéns " + nameStudent + " você está aprovado! Sua média foi " + average + "." : nameStudent + ", infelizmente sua média foi " + average + ". Se esforce para sua prova de recuperação!";
 
 alert(result);
+*/
+
+/*
+  Capture 10 items para compor a lista de um supermercado.
+  
+  Após capturar os 10 items, imprima-os, separando por vírgula.
+*/
+
+let items = []
+
+for(let item = 1; item <= 10; item++){
+  items.push(prompt("Digite o item " + item + " da lista"))
+}
+
+alert(items);
