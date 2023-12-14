@@ -113,7 +113,7 @@ alert(items);*/
   "Parabéns! Você advinhou o número em x tentativas"
 
   Substitua o "x" da mensagem, pelo número de tentativas
-*/
+
 
 let numberUser = prompt('Advinhe o número que estou pensando? Está entre 0 e 10');
 numberUser = Number(numberUser);
@@ -126,4 +126,79 @@ while(numberUser != randomNumber){
   xAttempts++;
 }
 
-alert("Parabéns! Você advinhou o número em " + xAttempts + " tentativas.");
+alert("Parabéns! Você advinhou o número em " + xAttempts + " tentativas.");*/
+
+/*
+
+Faça um programa que tenha um menu e apresente a seguinte mensagem:
+
+Olá usuário! Digite o número da opção desejada:
+
+  1. Cadastrar um item na listas
+  2. Mostrar itens cadastrados
+  3. Sair do programa
+
+_____
+
+O programa deverá capturar o número digitado pelo usuário e mostrar os seguintes cenários:
+
+Caso o usuário digite 1, ele poderá cadastrar um item em uma lista
+Caso o usuário digite 2, ele poderá ver os itens cadastrados
+  Se não houver nenhum item cadastrado, mostrar a mensagem:
+    "Não existem itens cadastrados"
+Caso o usuário digite 3, a aplicação deverá ser encerrada.
+
+_____
+
+Perguntas a serem feitas:
+
+1. Quais os dados de entrada que terei? (inputs)
+    O número da opção desejada
+
+2. Quais as variáveis?
+    Opção desejada
+    Lista de itens
+
+3. Qual o caminho ideal? (fluxo ideal)
+    Coletar primeiro a opção desejada pelo usuário, após isso criar 
+    cada um dos cenários possíveis e seguir pela opção desejada.
+
+4. Qual(is) o(s) caminho(s) alternativo(s)? (fluxo alternativo)
+5. Quais tratamentos de dados preciso fazer?
+6. Qual é a saída, ou quais os dados de saída, esperada? (outputs)
+
+let option;
+let items = [];
+
+while(option != 3) {
+
+  option = Number(prompt(`
+    Olá usuário! Digite o número da opção desejada:
+
+    1. Cadastrar um item na listas
+    2. Mostrar itens cadastrados
+    3. Sair do programa
+  `));
+
+  switch(option){
+    case 1:
+      let newItem = prompt("Digite o nome do item").toUpperCase()
+      items.push(newItem);
+      break;
+    case 2:
+      if(items.length == 0){
+        alert("Não existem itens cadastrados")
+      } else {
+        alert(items)
+      }
+      break;
+    case 3:
+      alert("tchau");
+      break;
+    default:
+      alert("Opção Inválida!")
+      break;
+  }
+
+}
+*/
