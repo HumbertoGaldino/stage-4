@@ -202,3 +202,44 @@ while(option != 3) {
 
 }
 */
+/* 
+  Crie uma lista de pacientes
+
+  Cada paciente dentro da lista, deverá conter
+    nome
+    idade
+    peso
+    altura
+
+  Escreva uma lista contendo o nome dos pacientes,
+  suas idades, alturas e pesos
+*/
+
+let patients = [
+  {
+    name: 'Alexandre',
+    age: 32,
+    weight: 75,
+    height: 173
+  },
+  {
+    name: 'Humberto',
+    age: 28,
+    weight: 106,
+    height: 173
+  },
+  {
+    name: 'Lucy',
+    age: 22,
+    weight: 55,
+    height: 162
+  },
+];
+
+/*let patientsName = [];*/
+
+for(let patient of patients){
+  alert(`${patient.name} tem ${patient.age} anos, pesa ${patient.weight}kg e possui uma altura de ${patient.height}m`)
+};
+
+/*alert(patientsName);*/
