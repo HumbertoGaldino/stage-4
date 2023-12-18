@@ -215,6 +215,7 @@ while(option != 3) {
   suas idades, alturas e pesos
 */
 
+/*
 let patients = [
   {
     name: 'Alexandre',
@@ -238,8 +239,63 @@ let patients = [
 
 /*let patientsName = [];*/
 
-for(let patient of patients){
-  alert(`${patient.name} tem ${patient.age} anos, pesa ${patient.weight}kg e possui uma altura de ${patient.height}m`)
-};
+/*for(let patient of patients){
+  alert(`${patient.name} tem ${patient.age} anos, pesa ${patient.weight}kg e possui uma altura de ${patient.height}cm`)
+};*/
 
 /*alert(patientsName);*/
+
+/* 
+  Aula 9
+
+  Dada uma lista de pacientes, descubra o IMC de cada paciente e imprima
+
+  "Paciente X possui o IMC de: Y"
+
+  Onde X é o nome do paciente e Y é o IMC desse paciente
+
+  Crie uma função para fazer o cálculo de IMC (peso / (altura * altura))
+*/
+
+const patients = [
+  {
+    name: "Humberto",
+    age: 28,
+    weight: 106,
+    height: 173
+  },
+  {
+    name: "Luiz",
+    age: 20,
+    weight: 100,
+    height: 190
+  },
+  {
+    name: "Alexandra",
+    age: 27,
+    weight: 70,
+    height: 170
+  },
+  {
+    name: "Carlos",
+    age: 42,
+    weight: 90,
+    height: 180
+  },
+]
+
+function IMC(weight, height){
+  return (weight / ((height / 100) ** 2)).toFixed(2)
+}
+
+function printPatientIMC(patient) {
+  return `
+    Paciente ${patient.name} possui o IMC de
+    ${IMC(patient.weight, patient.height)}
+  `
+}
+
+for (let patient of patients) {
+  let IMCmessage = printPatientIMC(patient)
+  alert(IMCmessage)
+}
